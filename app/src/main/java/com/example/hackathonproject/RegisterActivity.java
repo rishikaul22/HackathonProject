@@ -1,3 +1,4 @@
+
 package com.example.hackathonproject;
 
 import androidx.annotation.NonNull;
@@ -77,6 +78,8 @@ public class RegisterActivity extends AppCompatActivity {
                             Log.d(TAG, "onComplete: Created User");
                             //Start Home Screen Activity
                             Toast.makeText(RegisterActivity.this,"User Added",Toast.LENGTH_LONG).show();
+                            startActivity(new Intent(RegisterActivity.this,HomeActivity.class));
+                            finish();
                         }
                         else {
                             Log.d(TAG, "onComplete: Creation Failed");

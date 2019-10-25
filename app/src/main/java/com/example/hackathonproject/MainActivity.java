@@ -95,6 +95,8 @@ public class MainActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             Log.d(TAG, "onComplete: signInSuccess");
+                            startActivity(new Intent(MainActivity.this,HomeActivity.class));
+                            finish();
                             //Start new Activity
                         }
                         else {
